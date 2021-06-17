@@ -16,7 +16,7 @@ const META: MetaType = {
 	description:
 		"Boilerplate built to scale containing Typescript + NextJS + ChakraUI + Google Analytics + ESLint + Jest + Styled Components + Icons",
 	url: "https://www.333tattoos.art/",
-	image: "/",
+	image: "/logo.png",
 };
 
 export { GA_TRACKING_ID, IS_PRODUCTION, META };
