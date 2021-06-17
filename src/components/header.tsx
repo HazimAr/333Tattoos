@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Header = styled.header`
 	/* background-color: #1a202c; */
-	padding: 5px 50px;
+	/* padding: 5px 50px; */
 	display: flex;
 	box-sizing: border-box;
 	/* border-top: 5px #5cfff1 solid; */
