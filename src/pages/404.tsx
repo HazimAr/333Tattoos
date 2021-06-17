@@ -6,7 +6,6 @@ import {
 	VStack,
 	Heading,
 	Button,
-	Flex,
 } from "@chakra-ui/react";
 
 export default function FourOFour(): JSX.Element {
