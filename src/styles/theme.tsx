@@ -3,10 +3,6 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
 	colors: {
-		// bg: {
-		// 	100: "#0B0C10",
-		// 	200: "#1F2833",
-		// },
 		brand: {
 			100: "#FFCDD2",
 			200: "#EF9A9A",
@@ -49,8 +45,6 @@ const theme = extendTheme({
 			},
 		}),
 	},
-	initialColorMode: "dark",
-	useSystemColorMode: true,
 });
 
 export default theme;

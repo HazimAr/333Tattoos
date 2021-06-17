@@ -1,13 +1,29 @@
-import Link from "next/link";
+import {
+	Link,
+	Image,
+	Center,
+	Text,
+	VStack,
+	Heading,
+	Button,
+	Flex,
+} from "@chakra-ui/react";
 
-export default function FourOhFour(): JSX.Element {
+export default function FourOFour(): JSX.Element {
 	return (
-		<>
-			<h1>404 Page not Found</h1>
-			<h3>Edit this page in /src/pages/404</h3>
-			<Link href="/">
-				<a>Go back home</a>
-			</Link>
-		</>
+		<Center h="100vh" flexWrap="wrap-reverse">
+			<VStack maxW="550px">
+				<Heading>Oops! Looks like you found Hell</Heading>
+				<Text fontSize="lg">
+					The page you're looking for has fell down the depths of hell
+					and can not be found
+				</Text>
+
+				<Button as={Link} href="/">
+					Take Me Back
+				</Button>
+			</VStack>
+			<Image w="300px" h="500px" src="/drawing/devil.png" alt="devil sitting on 8-ball" />
+		</Center>
 	);
 }
