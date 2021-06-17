@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+// import { FaGithub, FaLinkedin } from "react-icons/fa";
 import styled from "styled-components";
 
 const Header = styled.header`
@@ -11,9 +11,9 @@ const Header = styled.header`
 	align-items: center;
 `;
 
-const StyledLink = styled.a`
-	margin: 0 20px;
-`;
+// const StyledLink = styled.a`
+// 	margin: 0 20px;
+// `;
 
 export const headerOptions = [
 	["Home", "/#"],
