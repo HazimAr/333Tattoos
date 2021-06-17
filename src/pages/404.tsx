@@ -23,7 +23,12 @@ export default function FourOFour(): JSX.Element {
 					Take Me Back
 				</Button>
 			</VStack>
-			<Image w="300px" h="500px" src="/drawing/devil.png" alt="devil sitting on 8-ball" />
+			<Image
+				w="300px"
+				h="500px"
+				src="/drawing/devil.png"
+				alt="devil sitting on 8-ball"
+			/>
 		</Center>
 	);
 }
