@@ -4,13 +4,15 @@ import { FaTwitter, FaInstagram } from "react-icons/fa";
 // eslint-disable-next-line import/no-default-export
 export default function footer(): JSX.Element {
 	return (
-		<Box as="footer" bg="brand.1100" py="20px">
-			<Heading size="md">Interested in my work?</Heading>
-			<Text my="20px">
+		<Box as="footer" py="20px">
+			<Heading size="md" color="text.100">
+				Interested in my work?
+			</Heading>
+			<Text my="15px" color="text.400">
 				I'm currently taking on new projects. Would you like to discuss
 				yours?
 			</Text>
-			<Box>
+			<Box color="text.500">
 				<Text>+1 342-5461-6487</Text>
 				<Text>devil@333tattoos.art</Text>
 			</Box>

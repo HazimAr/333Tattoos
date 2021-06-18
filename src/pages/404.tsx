@@ -19,7 +19,7 @@ export default function FourOFour(): JSX.Element {
 				</Text>
 
 				<Button as={Link} href="/">
-					Take Me Back
+					Climb back home
 				</Button>
 			</VStack>
 			<Image
