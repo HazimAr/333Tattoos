@@ -1,9 +1,14 @@
-import { Box, Flex, Heading, Text, Link, Image } from "@chakra-ui/react";
+import {
+	Box,
+	Flex,
+	Heading,
+	Text,
+	Link,
+	Image,
+	Circle,
+	BoxProps,
+} from "@chakra-ui/react";
 import { FaTwitter, FaInstagram } from "react-icons/fa";
-import { motion, isValidMotionProp } from "framer-motion";
-
-const MotionFaTwitter = motion(FaTwitter);
-const MotionFaInstagram = motion(FaInstagram);
 
 // eslint-disable-next-line import/no-default-export
 export default function footer(): JSX.Element {
@@ -27,20 +32,27 @@ export default function footer(): JSX.Element {
 			</Box>
 			<Flex justify="center" align="center" mt="20px">
 				<Flex justify="space-between" w="100%" maxW="50px">
-					<Link href="https://twitter.com/333tattoos" isExternal>
-						<MotionFaTwitter
-							size="20px"
-							whileTap={{ background: "red" }}
-						/>
+					<Link
+						as={Circle}
+						bg="red"
+						p="2.5px"
+						href="https://twitter.com/333tattoos"
+						isExternal
+					>
+						
+							<FaTwitter size="20px" />
+						
 					</Link>
 					<Link
+						as={Circle}
+						bg="red"
+						p="2.5px"
 						href="https://www.instagram.com/333.tattoos"
 						isExternal
 					>
-						<MotionFaInstagram
-							size="20px"
-							whileTap={{ background: "red" }}
-						/>
+						
+							<FaInstagram size="20px" />
+					
 					</Link>
 				</Flex>
 			</Flex>
