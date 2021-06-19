@@ -38,9 +38,7 @@ export default function footer(): JSX.Element {
 						href="https://twitter.com/333tattoos"
 						isExternal
 					>
-						
-							<FaTwitter size="20px" />
-						
+						<FaTwitter size="20px" />
 					</Link>
 					<Link
 						as={Circle}
@@ -49,9 +47,7 @@ export default function footer(): JSX.Element {
 						href="https://www.instagram.com/333.tattoos"
 						isExternal
 					>
-						
-							<FaInstagram size="20px" />
-					
+						<FaInstagram size="20px" />
 					</Link>
 				</Flex>
 			</Flex>
