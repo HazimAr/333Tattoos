@@ -6,7 +6,6 @@ import {
 	Link,
 	Image,
 	Circle,
-	BoxProps,
 } from "@chakra-ui/react";
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 
