@@ -1,10 +1,14 @@
 import { Box, Flex, Heading, Text, Link, Image } from "@chakra-ui/react";
 import { FaTwitter, FaInstagram } from "react-icons/fa";
+import { motion, isValidMotionProp } from "framer-motion";
+
+const MotionFaTwitter = motion(FaTwitter);
+const MotionFaInstagram = motion(FaInstagram);
 
 // eslint-disable-next-line import/no-default-export
 export default function footer(): JSX.Element {
 	return (
-		<Flex as="footer" align="center" flexDir="column" mt="100vh">
+		<Box as="footer" mt="100vh">
 			<Heading size="md" color="text.100">
 				Interested in my work?
 			</Heading>
@@ -13,23 +17,36 @@ export default function footer(): JSX.Element {
 				yours?
 			</Text>
 			<Box color="text.500">
-				<Text>+1 342-5461-6487</Text>
-				<Text>devil@333tattoos.art</Text>
+				<Link href="tel:8592406617" isExternal>
+					+1 859-240-6617
+				</Link>
+				<br />
+				<Link href="mailto:devil@333tattoos.art" isExternal>
+					devil@333tattoos.art
+				</Link>
 			</Box>
 			<Flex justify="center" align="center" mt="20px">
 				<Flex justify="space-between" w="100%" maxW="50px">
 					<Link href="https://twitter.com/333tattoos" isExternal>
-						<FaTwitter size="20px" />
+						<MotionFaTwitter
+							size="20px"
+							whileTap={{ background: "red" }}
+						/>
 					</Link>
 					<Link
 						href="https://www.instagram.com/333.tattoos"
 						isExternal
 					>
-						<FaInstagram size="20px" />
+						<MotionFaInstagram
+							size="20px"
+							whileTap={{ background: "red" }}
+						/>
 					</Link>
 				</Flex>
 			</Flex>
-			<Image src="/drawing/footer.png" w="500px" />
-		</Flex>
+			<Flex justify="center">
+				<Image src="/drawing/footer.png" w="500px" />
+			</Flex>
+		</Box>
 	);
 }
