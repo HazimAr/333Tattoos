@@ -1,10 +1,10 @@
-import { Box, Flex, Heading, Text, Link } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Link, Image } from "@chakra-ui/react";
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 
 // eslint-disable-next-line import/no-default-export
 export default function footer(): JSX.Element {
 	return (
-		<Box as="footer" py="20px">
+		<Flex as="footer" align="center" flexDir="column" mt="100vh">
 			<Heading size="md" color="text.100">
 				Interested in my work?
 			</Heading>
@@ -29,8 +29,7 @@ export default function footer(): JSX.Element {
 					</Link>
 				</Flex>
 			</Flex>
-
-			{/* Add fire / hell here */}
-		</Box>
+			<Image src="/drawing/footer.png" w="500px" />
+		</Flex>
 	);
 }
