@@ -39,7 +39,7 @@ export default function Header(): JSX.Element {
 									href={href}
 									_hover={{ textDecoration: "none" }}
 								>
-									<Heading size="lg">{title}</Heading>
+									<Heading fontSize="25px">{title}</Heading>
 								</NextChakraLink>
 							);
 						})}
