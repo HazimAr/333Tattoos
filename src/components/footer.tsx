@@ -20,7 +20,7 @@ export default function footer(): JSX.Element {
 	const primary = useToken("colors", "brand.secondary");
 	return (
 		<>
-			<Box mt="80%" mb="-8px">
+			<Box mb="-8px">
 				<Wave
 					fill={primary}
 					// paused
@@ -37,7 +37,7 @@ export default function footer(): JSX.Element {
 					<VStack>
 						<VStack spacing={5}>
 							<Heading as="h1">Interested in my work?</Heading>
-							<Heading
+							<Text
 								color="text.400"
 								fontSize="lg"
 								as="h2"
@@ -45,7 +45,7 @@ export default function footer(): JSX.Element {
 							>
 								I'm currently taking on new projects. Would you
 								like to discuss yours?
-							</Heading>
+							</Text>
 							<VStack color="text.500" spacing={0}>
 								<Link href="tel:8592406617" isExternal>
 									<Text fontSize="lg">+1 859-240-6617</Text>

@@ -35,8 +35,12 @@ const theme = extendTheme({
 			1000: "#161616",
 		},
 	},
+	fonts: {
+		heading: "Tattoo",
+	},
 	// @ts-ignore
 	styles: {
+		// @ts-ignore
 		global: () => ({
 			html: {
 				height: "100%",
@@ -70,6 +74,16 @@ const theme = extendTheme({
 				backgroundColor: "#b71c1c",
 				borderRadius: "80px",
 			},
+			"@font-face": [
+				{
+					fontFamily: "Blackgrounds",
+					src: "url('/fonts/Blackgrounds.ttf')",
+				},
+				{
+					fontFamily: "Tattoo",
+					src: "url('/fonts/Tattoo.ttf')",
+				},
+			],
 		}),
 	},
 });
