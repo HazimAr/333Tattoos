@@ -32,9 +32,7 @@ export default function footer(): JSX.Element {
 			</Box>
 			<Container bg="brand.secondary">
 				<ContainerInside as="footer" justify="center" align="center">
-					<Heading color="text.100" as="h1">
-						Interested in my work?
-					</Heading>
+					<Heading as="h1">Interested in my work?</Heading>
 					<Heading
 						my="15px"
 						color="text.400"
