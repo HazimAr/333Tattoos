@@ -1,12 +1,5 @@
-import {
-	Button,
-	Center,
-	Heading,
-	Image,
-	Link,
-	Text,
-	VStack,
-} from "@chakra-ui/react";
+import { Center, Heading, Image, Link, Text, VStack } from "@chakra-ui/react";
+import Button from "@components/button";
 
 export default function FourOFour(): JSX.Element {
 	return (

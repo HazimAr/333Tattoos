@@ -25,6 +25,12 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 			<Head>
 				<title>{META.title}</title>
 				<link rel="icon" href="/favicon.ico" />
+				<link
+					rel="preload"
+					href="/fonts/Tattoo.ttf"
+					as="font"
+					type="font/ttf"
+				/>
 			</Head>
 			<ChakraProvider theme={theme}>
 				<Header />

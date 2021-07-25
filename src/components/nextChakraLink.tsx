@@ -7,7 +7,7 @@ import NextLink from "next/link";
 export default function NextChakraLink(props: any): JSX.Element {
 	return (
 		<NextLink href={props.href} passHref>
-			<Link {...props} outline="none">
+			<Link {...props} _active={{ boxShadow: "none" }}>
 				{props.children}
 			</Link>
 		</NextLink>
