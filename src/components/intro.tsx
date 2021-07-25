@@ -1,13 +1,13 @@
 import {
 	Box,
+	Circle,
 	Flex,
 	Heading,
-	Text,
-	Link,
 	Image,
-	Circle,
+	Link,
+	Text,
 } from "@chakra-ui/react";
-import { FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaTwitter } from "react-icons/fa";
 
 // eslint-disable-next-line import/no-default-export
 export default function footer(): JSX.Element {

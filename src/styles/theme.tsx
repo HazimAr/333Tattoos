@@ -3,18 +3,10 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
 	colors: {
-		heaven: {
-			50: "#dffbfb",
-			100: "#aff4f6",
-			200: "#74eef2",
-			300: "#02e6ee",
-			400: "#00dfeb",
-			500: "#00d7e9",
-			600: "#00c6d6",
-			700: "#00b0ba",
-			800: "#009ba2",
-			900: "#007774",
-			
+		brand: {
+			primary: "#b71c1c",
+			secondary: "#212121",
+			accent: "#009ba2",
 		},
 		hell: {
 			100: "#FFCDD2",
@@ -43,6 +35,7 @@ const theme = extendTheme({
 			1000: "#161616",
 		},
 	},
+	// @ts-ignore
 	styles: {
 		global: () => ({
 			html: {
@@ -56,6 +49,26 @@ const theme = extendTheme({
 			},
 			a: {
 				color: "white",
+			},
+			"::-webkit-scrollbar": {
+				width: "0.6em",
+			},
+			h1: {
+				color: "#009ba2",
+			},
+			h2: {
+				color: "#009ba2",
+			},
+			h3: {
+				color: "#009ba2",
+			},
+			"::-webkit-scrollbar-track": {
+				borderRadius: "0px",
+			},
+
+			"::-webkit-scrollbar-thumb": {
+				backgroundColor: "#b71c1c",
+				borderRadius: "80px",
 			},
 		}),
 	},
