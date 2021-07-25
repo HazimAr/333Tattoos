@@ -17,18 +17,18 @@ import Wave from "react-wavify";
 
 // eslint-disable-next-line import/no-default-export
 export default function footer(): JSX.Element {
-	const redPrimary = useToken("colors", "brand.secondary");
+	const primary = useToken("colors", "brand.secondary");
 	return (
 		<>
 			<Box mt="80%" mb="-8px">
 				<Wave
-					fill={redPrimary}
+					fill={primary}
 					// paused
 					options={{
 						height: 120,
 						amplitude: 9,
-						speed: 0.3,
-						points: 4,
+						speed: 0.5,
+						points: 5,
 					}}
 				/>
 			</Box>

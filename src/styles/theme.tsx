@@ -6,7 +6,7 @@ const theme = extendTheme({
 		brand: {
 			primary: "#b71c1c",
 			secondary: "#212121",
-			accent: "#00dde9",
+			accent: "#1cb7b7",
 		},
 		hell: {
 			100: "#FFCDD2",
@@ -54,13 +54,13 @@ const theme = extendTheme({
 				width: "0.6em",
 			},
 			h1: {
-				color: "#00dde9",
+				color: "#1cb7b7",
 			},
 			h2: {
-				color: "#00dde9",
+				color: "#1cb7b7",
 			},
 			h3: {
-				color: "#00dde9",
+				color: "#1cb7b7",
 			},
 			"::-webkit-scrollbar-track": {
 				borderRadius: "0px",
