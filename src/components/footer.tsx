@@ -18,7 +18,7 @@ export default function footer(): JSX.Element {
 	const redPrimary = useToken("colors", "brand.secondary");
 	return (
 		<>
-			<Box mt="100vh" mb="-8px">
+			<Box mt="80%" mb="-8px">
 				<Wave
 					fill={redPrimary}
 					// paused

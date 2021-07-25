@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
 						}}
 					/>
 				</Head>
-				<body>
+				<body style={{ minHeight: "100vh" }}>
 					<Main />
 					<NextScript />
 				</body>
