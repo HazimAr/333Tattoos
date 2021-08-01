@@ -27,19 +27,28 @@ export default function Header(): JSX.Element {
 					justify={{ base: "center", md: "space-between" }}
 					flexDir={{ base: "column", md: "row" }}
 				>
-					<HStack align="center">
-						<Image src="/logo.png" w="100px" />
-						<Heading>333 Tattoos</Heading>
-					</HStack>
+					<NextChakraLink href="/">
+						<HStack align="center">
+							<Image src="/logo.png" w="100px" />
+							<Heading
+								transition="ease .2s"
+								_hover={{ color: "brand.primary" }}
+							>
+								333 Tattoos
+							</Heading>
+						</HStack>
+					</NextChakraLink>
 					<HStack align="center" spacing={5}>
 						{headerOptions.map(({ title, href }) => {
 							return (
-								<NextChakraLink
-									key={title}
-									href={href}
-									_hover={{ textDecoration: "none" }}
-								>
-									<Heading fontSize="25px">{title}</Heading>
+								<NextChakraLink key={title} href={href}>
+									<Heading
+										fontSize="25px"
+										transition="ease .2s"
+										_hover={{ color: "brand.primary" }}
+									>
+										{title}
+									</Heading>
 								</NextChakraLink>
 							);
 						})}

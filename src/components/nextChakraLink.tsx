@@ -9,6 +9,9 @@ export default function NextChakraLink(props: any): JSX.Element {
 		<NextLink href={props.href} passHref>
 			<Link
 				{...props}
+				_hover={{
+					textDecoration: "none",
+				}}
 				_active={{ boxShadow: "none" }}
 				_focus={{ boxShadow: "none" }}
 			>

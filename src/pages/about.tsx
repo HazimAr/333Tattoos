@@ -17,7 +17,11 @@ export default function about(): JSX.Element {
 						spacing={{ base: 0, md: 20 }}
 						flexDir={{ base: "column-reverse", md: "row" }}
 					>
-						<VStack borderColor="brand.primary" borderWidth="5px">
+						<VStack
+							borderColor="brand.primary"
+							borderWidth="5px"
+							mt={{ base: 10, md: 0 }}
+						>
 							<Image
 								src="/me.gif"
 								width="2500px"
@@ -43,7 +47,7 @@ export default function about(): JSX.Element {
 						spacing={{ base: 0, md: 20 }}
 						flexDir={{ base: "column", md: "row" }}
 					>
-						<VStack>
+						<VStack mb={{ base: 10, md: 0 }}>
 							<Heading>My Experience</Heading>
 							<Text>
 								Lorem ipsum dolor sit, amet consectetur
