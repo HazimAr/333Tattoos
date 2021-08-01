@@ -19,7 +19,7 @@ import Wave from "react-wavify";
 export default function footer(): JSX.Element {
 	const primary = useToken("colors", "brand.secondary");
 	return (
-		<>
+		<Box as="footer">
 			<Box mb="-8px">
 				<Wave
 					fill={primary}
@@ -86,6 +86,6 @@ export default function footer(): JSX.Element {
 					</VStack>
 				</ContainerInside>
 			</Container>
-		</>
+		</Box>
 	);
 }
