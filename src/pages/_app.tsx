@@ -1,4 +1,4 @@
-import { ChakraProvider, Stack } from "@chakra-ui/react";
+import { Box, ChakraProvider, Stack } from "@chakra-ui/react";
 import Footer from "@components/footer";
 import Header from "@components/header";
 import { pageview } from "@lib/gtag";
@@ -34,10 +34,10 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 			</Head>
 			<ChakraProvider theme={theme}>
 				<Stack justify="space-between" minH="100vh" spacing={0}>
-					<>
+					<Box>
 						<Header />
 						<Component {...pageProps} />
-					</>
+					</Box>
 					<Footer />
 				</Stack>
 			</ChakraProvider>
