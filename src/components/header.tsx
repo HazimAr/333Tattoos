@@ -2,6 +2,7 @@ import { Heading, HStack, Image } from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
 import NextChakraLink from "@components/nextChakraLink";
+import { useRouter } from "next/router";
 
 const headerOptions = [
 	{
@@ -20,6 +21,7 @@ const headerOptions = [
 
 // eslint-disable-next-line import/no-default-export
 export default function Header(): JSX.Element {
+	const router = useRouter();
 	return (
 		<Container>
 			<ContainerInside>
@@ -46,6 +48,11 @@ export default function Header(): JSX.Element {
 										fontSize="25px"
 										transition="ease .2s"
 										_hover={{ color: "brand.primary" }}
+										color={
+											router.asPath === href
+												? "brand.primary"
+												: ""
+										}
 									>
 										{title}
 									</Heading>
