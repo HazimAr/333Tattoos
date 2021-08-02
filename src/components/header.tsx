@@ -6,12 +6,8 @@ import { useRouter } from "next/router";
 
 const headerOptions = [
 	{
-		title: "Home",
-		href: "/",
-	},
-	{
 		title: "Art Gallery",
-		href: "/gallery",
+		href: "/",
 	},
 	{
 		title: "About Me",

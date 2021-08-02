@@ -3,7 +3,7 @@ import Button from "@components/button";
 
 export default function FourOFour(): JSX.Element {
 	return (
-		<Center h="100vh" flexWrap="wrap-reverse">
+		<Center flexWrap="wrap-reverse">
 			<VStack maxW="550px">
 				<Heading>Oops! Looks like you found Hell</Heading>
 				<Text fontSize="lg">
