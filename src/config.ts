@@ -14,7 +14,7 @@ const META: MetaType = {
 	title: "333 Tattoos",
 	lang: "en-us",
 	description: "333 Tattoos",
-	url: "https://www.333tattoos.art/",
+	url: "https://333tattoos.art/",
 	image: "/logo.png",
 };
 
