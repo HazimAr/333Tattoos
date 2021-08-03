@@ -35,7 +35,7 @@ export default function About(): JSX.Element {
 							</VStack>
 
 							<VStack>
-								<Heading>Who Am I?</Heading>
+								<Heading>Who I Am</Heading>
 								<Text>
 									Lorem ipsum dolor sit, amet consectetur
 									adipisicing elit. Ut eius numquam ipsam
