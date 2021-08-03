@@ -28,9 +28,9 @@ export default function About(): JSX.Element {
 								mt={{ base: 10, md: 0 }}
 							>
 								<Image
-									src="/me.gif"
-									width="2500px"
-									height="1250px"
+									src="/me.png"
+									width="2000px"
+									height="2000px"
 								/>
 							</VStack>
 
@@ -72,9 +72,9 @@ export default function About(): JSX.Element {
 								borderWidth="5px"
 							>
 								<Image
-									src="/me.gif"
-									width="2500px"
-									height="1250px"
+									src="/featured.png"
+									width="2000px"
+									height="2000px"
 								/>
 							</VStack>
 						</HStack>
