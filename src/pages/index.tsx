@@ -1,16 +1,56 @@
+import { Center, Grid, GridItem, Image } from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
+import dirTree from "directory-tree";
 import Head from "next/head";
 
-export default function Gallery(): JSX.Element {
+export default function Gallery({
+	drawings,
+	tattoos,
+}: {
+	drawings: any[];
+	tattoos: any[];
+}): JSX.Element {
+	// console.log(__dirname);
 	return (
 		<>
 			<Head>
 				<title>333 Tattoos | Gallery</title>
 			</Head>
 			<Container>
-				<ContainerInside></ContainerInside>
+				<ContainerInside>
+					<Center>
+						<Grid
+							templateColumns={{
+								base: "repeat(1, 1fr)",
+								sm: "repeat(2, 1fr)",
+								md: "repeat(3, 1fr)",
+								lg: "repeat(4, 1fr)",
+								xl: "repeat(5, 1fr)",
+							}}
+							gap={6}
+						>
+							{drawings.map((drawing) => {
+								return (
+									<GridItem>
+										<Image
+											src={`/art/drawings/${drawing.name}`}
+											maxW="200px"
+										/>
+									</GridItem>
+								);
+							})}
+						</Grid>
+					</Center>
+				</ContainerInside>
 			</Container>
 		</>
 	);
+}
+
+export async function getServerSideProps(context) {
+	console.log(dirTree("public/art/tattoos"));
+	const drawings = dirTree("public/art/drawings").children;
+	const tattoos = dirTree("public/art/tattoos").children;
+	return { props: { drawings, tattoos } };
 }
