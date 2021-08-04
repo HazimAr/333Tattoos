@@ -41,21 +41,10 @@ export default function Gallery({
 						>
 							{tattoos.map((tattoo) => {
 								return (
-									<GridItem key={tattoo.name}>
-										<Center h="100%">
-											<Image
-												src={`/art/tattoos/${tattoo.name}`}
-												transition="ease .2s"
-												_hover={{
-													transform: "scale(0.9)",
-													cursor: "pointer",
-												}}
-												rounded={5}
-												maxW="230px"
-												maxH="300px"
-											/>
-										</Center>
-									</GridItem>
+									<DrawingImage
+										name={tattoo.name}
+										src="/art/tattoos/"
+									/>
 								);
 							})}
 						</Grid>
@@ -72,21 +61,10 @@ export default function Gallery({
 						>
 							{drawings.map((drawing) => {
 								return (
-									<GridItem key={drawing.name}>
-										<Center h="100%">
-											<Image
-												src={`/art/drawings/${drawing.name}`}
-												transition="ease .2s"
-												_hover={{
-													transform: "scale(0.9)",
-													cursor: "pointer",
-												}}
-												rounded={5}
-												maxW="230px"
-												maxH="300px"
-											/>
-										</Center>
-									</GridItem>
+									<DrawingImage
+										name={drawing.name}
+										src="/art/drawings/"
+									/>
 								);
 							})}
 						</Grid>
@@ -94,6 +72,26 @@ export default function Gallery({
 				</ContainerInside>
 			</Container>
 		</>
+	);
+}
+
+function DrawingImage({ name, src }: { name: string; src: string }) {
+	return (
+		<GridItem key={name}>
+			<Center h="100%">
+				<Image
+					src={`${src}${name}`}
+					transition="ease .2s"
+					_hover={{
+						transform: "scale(0.9)",
+						cursor: "pointer",
+					}}
+					rounded={5}
+					maxW="230px"
+					maxH="300px"
+				/>
+			</Center>
+		</GridItem>
 	);
 }
 
