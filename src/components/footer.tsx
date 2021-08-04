@@ -50,15 +50,6 @@ export default function footer(): JSX.Element {
 								<Link href="tel:8592406617" isExternal>
 									<Text fontSize="lg">+1 859-240-6617</Text>
 								</Link>
-
-								<Link
-									href="mailto:devil@333tattoos.art"
-									isExternal
-								>
-									<Text fontSize="lg">
-										devil@333tattoos.art
-									</Text>
-								</Link>
 							</VStack>
 
 							<HStack>

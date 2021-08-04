@@ -32,7 +32,7 @@ export default function Gallery({
 						>
 							{drawings.map((drawing) => {
 								return (
-									<GridItem>
+									<GridItem key={drawing.name}>
 										<Image
 											src={`/art/drawings/${drawing.name}`}
 											maxW="200px"
@@ -49,7 +49,6 @@ export default function Gallery({
 }
 
 export async function getServerSideProps(context) {
-	console.log(dirTree("public/art/tattoos"));
 	const drawings = dirTree("public/art/drawings").children;
 	const tattoos = dirTree("public/art/tattoos").children;
 	return { props: { drawings, tattoos } };
