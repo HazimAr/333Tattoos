@@ -33,7 +33,7 @@ export default function Gallery({
 							{tattoos.map((tattoo) => {
 								return (
 									<DrawingImage
-										key={drawing.name}
+										key={tattoo.name}
 										name={tattoo.name}
 										src="/art/tattoos/"
 									/>
