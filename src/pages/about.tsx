@@ -34,7 +34,7 @@ export default function About(): JSX.Element {
 								animate={{ x: 0 }}
 								initial={{ x: -200 }}
 								transition={{
-									ease: "ease",
+									ease: "easeIn",
 									duration: 1,
 								}}
 							>
@@ -93,7 +93,7 @@ export default function About(): JSX.Element {
 								animate={{ x: 0 }}
 								initial={{ x: 200 }}
 								transition={{
-									ease: "ease",
+									ease: "easeIn",
 									duration: 1,
 								}}
 							>
