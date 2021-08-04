@@ -1,8 +1,9 @@
-import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Heading, HStack, Text, VStack } from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import Image from "next/image";
 
 const MotionVStack = motion(VStack);
 const MotionImage = motion(Image);
@@ -34,7 +35,7 @@ export default function About(): JSX.Element {
 								animate={{ x: 0 }}
 								initial={{ x: -200 }}
 								transition={{
-									ease: "easeIn",
+									ease: "easeOut",
 									duration: 1,
 								}}
 							>
@@ -93,7 +94,7 @@ export default function About(): JSX.Element {
 								animate={{ x: 0 }}
 								initial={{ x: 200 }}
 								transition={{
-									ease: "easeIn",
+									ease: "easeOut",
 									duration: 1,
 								}}
 							>
