@@ -36,6 +36,11 @@ export default function Gallery({
 										<Center h="100%">
 											<Image
 												src={`/art/tattoos/${tattoo.name}`}
+												transition="ease .2s"
+												_hover={{
+													transform: "scale(0.9)",
+													cursor: "pointer",
+												}}
 												maxW="200px"
 												maxH="200px"
 											/>
@@ -60,6 +65,9 @@ export default function Gallery({
 										<Center h="100%">
 											<Image
 												src={`/art/drawings/${drawing.name}`}
+												_hover={{
+													transform: "scale(0.9)",
+												}}
 												maxH="200px"
 												maxW="200px"
 											/>
