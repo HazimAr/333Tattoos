@@ -29,16 +29,7 @@ export default function Gallery({
 				<ContainerInside>
 					<VStack>
 						<Heading>Tattoos</Heading>
-						<Grid
-							templateColumns={{
-								base: "repeat(1, 1fr)",
-								sm: "repeat(2, 1fr)",
-								md: "repeat(3, 1fr)",
-								lg: "repeat(4, 1fr)",
-								xl: "repeat(5, 1fr)",
-							}}
-							gap={6}
-						>
+						<DrawingGrid>
 							{tattoos.map((tattoo) => {
 								return (
 									<DrawingImage
@@ -47,18 +38,9 @@ export default function Gallery({
 									/>
 								);
 							})}
-						</Grid>
+						</DrawingGrid>
 						<Heading>Drawings</Heading>
-						<Grid
-							templateColumns={{
-								base: "repeat(1, 1fr)",
-								sm: "repeat(2, 1fr)",
-								md: "repeat(3, 1fr)",
-								lg: "repeat(4, 1fr)",
-								xl: "repeat(5, 1fr)",
-							}}
-							gap={6}
-						>
+						<DrawingGrid>
 							{drawings.map((drawing) => {
 								return (
 									<DrawingImage
@@ -67,12 +49,28 @@ export default function Gallery({
 									/>
 								);
 							})}
-						</Grid>
+						</DrawingGrid>
 					</VStack>
 				</ContainerInside>
 			</Container>
 		</>
 	);
+}
+
+export async function getServerSideProps() {
+	const drawings = dirTree(
+		`${path.join(
+			getConfig().serverRuntimeConfig.PROJECT_ROOT,
+			"./public"
+		)}/art/drawings`
+	).children;
+	const tattoos = dirTree(
+		`${path.join(
+			getConfig().serverRuntimeConfig.PROJECT_ROOT,
+			"./public"
+		)}/art/tattoos`
+	).children;
+	return { props: { drawings, tattoos } };
 }
 
 function DrawingImage({ name, src }: { name: string; src: string }) {
@@ -95,18 +93,19 @@ function DrawingImage({ name, src }: { name: string; src: string }) {
 	);
 }
 
-export async function getServerSideProps() {
-	const drawings = dirTree(
-		`${path.join(
-			getConfig().serverRuntimeConfig.PROJECT_ROOT,
-			"./public"
-		)}/art/drawings`
-	).children;
-	const tattoos = dirTree(
-		`${path.join(
-			getConfig().serverRuntimeConfig.PROJECT_ROOT,
-			"./public"
-		)}/art/tattoos`
-	).children;
-	return { props: { drawings, tattoos } };
+function DrawingGrid({ children }: { children: any[] }) {
+	return (
+		<Grid
+			templateColumns={{
+				base: "repeat(1, 1fr)",
+				sm: "repeat(2, 1fr)",
+				md: "repeat(3, 1fr)",
+				lg: "repeat(4, 1fr)",
+				xl: "repeat(5, 1fr)",
+			}}
+			gap={6}
+		>
+			{children}
+		</Grid>
+	);
 }
