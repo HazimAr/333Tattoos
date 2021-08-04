@@ -1,4 +1,11 @@
-import { Center, Grid, GridItem, Image, VStack } from "@chakra-ui/react";
+import {
+	Center,
+	Grid,
+	GridItem,
+	Heading,
+	Image,
+	VStack,
+} from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
 import dirTree from "directory-tree";
@@ -20,6 +27,7 @@ export default function Gallery({
 			<Container>
 				<ContainerInside>
 					<VStack>
+						<Heading>Tattoos</Heading>
 						<Grid
 							templateColumns={{
 								base: "repeat(1, 1fr)",
@@ -49,6 +57,7 @@ export default function Gallery({
 								);
 							})}
 						</Grid>
+						<Heading>Drawings</Heading>
 						<Grid
 							templateColumns={{
 								base: "repeat(1, 1fr)",
