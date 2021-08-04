@@ -1,7 +1,11 @@
 import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
+import { motion } from "framer-motion";
 import Head from "next/head";
+
+const MotionVStack = motion(VStack);
+const MotionImage = motion(Image);
 
 export default function About(): JSX.Element {
 	return (
@@ -11,7 +15,7 @@ export default function About(): JSX.Element {
 			</Head>
 			<Container>
 				<ContainerInside>
-					<VStack spacing={5}>
+					<VStack spacing={5} overflowX="hidden">
 						<HStack justify="center">
 							<Heading textAlign="center" size="2xl">
 								About me
@@ -21,20 +25,33 @@ export default function About(): JSX.Element {
 							spacing={{ base: 0, md: 20 }}
 							flexDir={{ base: "column-reverse", md: "row" }}
 						>
-							<VStack
+							<MotionVStack
 								w="100%"
-								borderColor="brand.primary"
-								borderWidth="5px"
+								bg="brand.secondary"
+								p={5}
+								rounded={10}
 								mt={{ base: 10, md: 0 }}
+								animate={{ x: 0 }}
+								initial={{ x: -200 }}
+								transition={{
+									ease: "ease",
+									duration: 1,
+								}}
 							>
-								<Image
-									src="/me.png"
-									width="300px"
-									height="300px"
-								/>
-							</VStack>
+								<MotionImage
+									whileHover={{ scale: 0.9, rotate: 10 }}
+									whileTap={{
+										scale: 0.95,
 
-							<VStack w="100%">
+										borderRadius: "100%",
+									}}
+									src="/me.png"
+									width="400px"
+									height="400px"
+								/>
+							</MotionVStack>
+
+							<MotionVStack w="100%">
 								<Heading>Who I Am</Heading>
 								<Text>
 									Lorem ipsum dolor sit, amet consectetur
@@ -47,13 +64,13 @@ export default function About(): JSX.Element {
 									necessitatibus fugiat optio ducimus, ratione
 									quam ea.
 								</Text>
-							</VStack>
+							</MotionVStack>
 						</HStack>
 						<HStack
 							spacing={{ base: 0, md: 20 }}
 							flexDir={{ base: "column", md: "row" }}
 						>
-							<VStack w="100%" mb={{ base: 10, md: 0 }}>
+							<MotionVStack w="100%" mb={{ base: 10, md: 0 }}>
 								<Heading>My Experience</Heading>
 								<Text>
 									Lorem ipsum dolor sit, amet consectetur
@@ -66,18 +83,32 @@ export default function About(): JSX.Element {
 									necessitatibus fugiat optio ducimus, ratione
 									quam ea.
 								</Text>
-							</VStack>
-							<VStack
-								borderColor="brand.primary"
-								borderWidth="5px"
+							</MotionVStack>
+							<MotionVStack
 								w="100%"
+								bg="brand.secondary"
+								p={5}
+								rounded={10}
+								mt={{ base: 10, md: 0 }}
+								animate={{ x: 0 }}
+								initial={{ x: 200 }}
+								transition={{
+									ease: "ease",
+									duration: 1,
+								}}
 							>
-								<Image
+								<MotionImage
+									whileHover={{ scale: 0.9, rotate: 10 }}
+									whileTap={{
+										scale: 0.95,
+
+										borderRadius: "100%",
+									}}
 									src="/featured.png"
-									width="300px"
-									height="300px"
+									width="400px"
+									height="400px"
 								/>
-							</VStack>
+							</MotionVStack>
 						</HStack>
 					</VStack>
 				</ContainerInside>
