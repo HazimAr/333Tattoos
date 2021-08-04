@@ -50,6 +50,7 @@ export default function Gallery({
 													transform: "scale(0.9)",
 													cursor: "pointer",
 												}}
+												rounded={5}
 												maxW="230px"
 												maxH="300px"
 											/>
@@ -80,6 +81,7 @@ export default function Gallery({
 													transform: "scale(0.9)",
 													cursor: "pointer",
 												}}
+												rounded={5}
 												maxW="230px"
 												maxH="300px"
 											/>
