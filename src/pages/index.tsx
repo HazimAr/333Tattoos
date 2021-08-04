@@ -57,10 +57,13 @@ export default function Gallery({
 							{drawings.map((drawing) => {
 								return (
 									<GridItem key={drawing.name}>
-										<Image
-											src={`/art/drawings/${drawing.name}`}
-											maxW="200px"
-										/>
+										<Center h="100%">
+											<Image
+												src={`/art/drawings/${drawing.name}`}
+												maxH="200px"
+												maxW="200px"
+											/>
+										</Center>
 									</GridItem>
 								);
 							})}
