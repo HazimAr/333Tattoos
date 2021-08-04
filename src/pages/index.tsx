@@ -9,8 +9,9 @@ import {
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
 import dirTree from "directory-tree";
+import getConfig from "next/config";
 import Head from "next/head";
-
+import path from "path";
 export default function Gallery({
 	drawings,
 	tattoos,
@@ -93,7 +94,17 @@ export default function Gallery({
 }
 
 export async function getServerSideProps() {
-	const drawings = dirTree("./public/art/drawings").children;
-	const tattoos = dirTree("./public/art/tattoos").children;
+	const drawings = dirTree(
+		`${path.join(
+			getConfig().serverRuntimeConfig.PROJECT_ROOT,
+			"./public"
+		)}/art/drawings`
+	).children;
+	const tattoos = dirTree(
+		`${path.join(
+			getConfig().serverRuntimeConfig.PROJECT_ROOT,
+			"./public"
+		)}/art/tattoos`
+	).children;
 	return { props: { drawings, tattoos } };
 }
