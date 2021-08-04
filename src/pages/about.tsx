@@ -14,12 +14,12 @@ export default function About(): JSX.Element {
 			<Head>
 				<title>333 Tattoos | About Me</title>
 			</Head>
-			<Container>
+			<Container mt="50px">
 				<ContainerInside>
 					<VStack spacing={5} overflowX="hidden">
 						<HStack justify="center">
 							<Heading textAlign="center" size="2xl">
-								About me
+								About Me
 							</Heading>
 						</HStack>
 						<HStack
