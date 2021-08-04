@@ -1,8 +1,7 @@
-import { Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
 import Head from "next/head";
-import Image from "next/image";
 
 export default function About(): JSX.Element {
 	return (
@@ -23,18 +22,19 @@ export default function About(): JSX.Element {
 							flexDir={{ base: "column-reverse", md: "row" }}
 						>
 							<VStack
+								w="100%"
 								borderColor="brand.primary"
 								borderWidth="5px"
 								mt={{ base: 10, md: 0 }}
 							>
 								<Image
 									src="/me.png"
-									width="2000px"
-									height="2000px"
+									width="300px"
+									height="300px"
 								/>
 							</VStack>
 
-							<VStack>
+							<VStack w="100%">
 								<Heading>Who I Am</Heading>
 								<Text>
 									Lorem ipsum dolor sit, amet consectetur
@@ -53,7 +53,7 @@ export default function About(): JSX.Element {
 							spacing={{ base: 0, md: 20 }}
 							flexDir={{ base: "column", md: "row" }}
 						>
-							<VStack mb={{ base: 10, md: 0 }}>
+							<VStack w="100%" mb={{ base: 10, md: 0 }}>
 								<Heading>My Experience</Heading>
 								<Text>
 									Lorem ipsum dolor sit, amet consectetur
@@ -70,11 +70,12 @@ export default function About(): JSX.Element {
 							<VStack
 								borderColor="brand.primary"
 								borderWidth="5px"
+								w="100%"
 							>
 								<Image
 									src="/featured.png"
-									width="2000px"
-									height="2000px"
+									width="300px"
+									height="300px"
 								/>
 							</VStack>
 						</HStack>
