@@ -49,8 +49,8 @@ export default function Gallery({
 													transform: "scale(0.9)",
 													cursor: "pointer",
 												}}
-												maxW="200px"
-												maxH="200px"
+												maxW="230px"
+												maxH="300px"
 											/>
 										</Center>
 									</GridItem>
@@ -77,8 +77,8 @@ export default function Gallery({
 												_hover={{
 													transform: "scale(0.9)",
 												}}
-												maxH="200px"
-												maxW="200px"
+												maxW="230px"
+												maxH="300px"
 											/>
 										</Center>
 									</GridItem>
@@ -93,7 +93,7 @@ export default function Gallery({
 }
 
 export async function getServerSideProps() {
-	const drawings = dirTree("public/art/drawings").children;
-	const tattoos = dirTree("public/art/tattoos").children;
+	const drawings = dirTree("./public/art/drawings").children;
+	const tattoos = dirTree("./public/art/tattoos").children;
 	return { props: { drawings, tattoos } };
 }
