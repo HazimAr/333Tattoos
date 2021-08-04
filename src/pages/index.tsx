@@ -33,6 +33,7 @@ export default function Gallery({
 							{tattoos.map((tattoo) => {
 								return (
 									<DrawingImage
+										key={drawing.name}
 										name={tattoo.name}
 										src="/art/tattoos/"
 									/>
@@ -44,6 +45,7 @@ export default function Gallery({
 							{drawings.map((drawing) => {
 								return (
 									<DrawingImage
+										key={drawing.name}
 										name={drawing.name}
 										src="/art/drawings/"
 									/>
@@ -75,7 +77,7 @@ export async function getServerSideProps() {
 
 function DrawingImage({ name, src }: { name: string; src: string }) {
 	return (
-		<GridItem key={name}>
+		<GridItem>
 			<Center h="100%">
 				<Image
 					src={`${src}${name}`}
