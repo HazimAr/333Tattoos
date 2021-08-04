@@ -75,8 +75,10 @@ export default function Gallery({
 										<Center h="100%">
 											<Image
 												src={`/art/drawings/${drawing.name}`}
+												transition="ease .2s"
 												_hover={{
 													transform: "scale(0.9)",
+													cursor: "pointer",
 												}}
 												maxW="230px"
 												maxH="300px"
