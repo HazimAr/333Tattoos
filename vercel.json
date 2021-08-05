@@ -1,6 +1,5 @@
 {
 	"trailingSlash": false,
-	"public": true,
 	"redirects": [],
 	"github": {
 		"silent": true
