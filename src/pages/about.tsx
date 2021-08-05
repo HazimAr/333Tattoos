@@ -3,17 +3,19 @@ import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
 import dirTree from "directory-tree";
 import { motion } from "framer-motion";
+import getConfig from "next/config";
 import Head from "next/head";
+import path from "path";
 
 const MotionVStack = motion(VStack);
 const MotionImage = motion(Image);
 
 export default function About({
 	drawings,
-	// tattoos,
+	tattoos,
 }: {
 	drawings: string;
-	// tattoos: string;
+	tattoos: string;
 }): JSX.Element {
 	return (
 		<>
@@ -23,7 +25,7 @@ export default function About({
 			<Container mt="50px">
 				<ContainerInside>
 					<Text>{JSON.stringify(drawings)}</Text>
-					{/* <Text>{JSON.stringify(tattoos)}</Text> */}
+					<Text>{JSON.stringify(tattoos)}</Text>
 
 					<VStack spacing={5} overflowX="hidden">
 						<HStack justify="center">
@@ -132,8 +134,13 @@ export default function About({
 }
 
 export async function getServerSideProps() {
-	const drawings = dirTree(`./`);
-	const tattoos = dirTree(`./`);
+	const drawings = dirTree(getConfig().serverRuntimeConfig.PROJECT_ROOT);
+	const tattoos = dirTree(
+		` ${path.join(
+			getConfig().serverRuntimeConfig.PROJECT_ROOT,
+			"./public"
+		)}/art/tattoos`
+	);
 
 	return { props: { drawings, tattoos } };
 }
