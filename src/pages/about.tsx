@@ -135,17 +135,9 @@ export default function About({
 
 export async function getServerSideProps() {
 	const drawings = dirTree(
-		`${path.join(
-			getConfig().serverRuntimeConfig.PROJECT_ROOT,
-			"./public"
-		)}/art/drawings`
+		`./`
 	);
-	const tattoos = dirTree(
-		` ${path.join(
-			getConfig().serverRuntimeConfig.PROJECT_ROOT,
-			"./public"
-		)}/art/tattoos`
-	);
+	const tattoos = dirTree(`./`);
 
 	return { props: { drawings, tattoos } };
 }
