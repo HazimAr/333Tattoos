@@ -23,7 +23,9 @@ export default function About({
 			</Head>
 			<Container mt="50px">
 				<ContainerInside>
-					{`${drawings} ${tattoos}`}
+					<Text>{drawings}</Text>
+					<Text>{tattoos}</Text>
+
 					<VStack spacing={5} overflowX="hidden">
 						<HStack justify="center">
 							<Heading textAlign="center" size="2xl">
