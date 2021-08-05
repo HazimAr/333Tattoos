@@ -82,7 +82,7 @@ export default function About({
 								</Text>
 							</MotionVStack>
 						</HStack>
-						<HStack
+						{/* <HStack
 							spacing={{ base: 0, md: 20 }}
 							flexDir={{ base: "column", md: "row" }}
 						>
@@ -125,7 +125,7 @@ export default function About({
 									height="400px"
 								/>
 							</MotionVStack>
-						</HStack>
+						</HStack> */}
 					</VStack>
 				</ContainerInside>
 			</Container>
