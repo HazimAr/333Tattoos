@@ -1,6 +1,7 @@
 import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
+import dirTree from "directory-tree";
 import { motion } from "framer-motion";
 import getConfig from "next/config";
 import Head from "next/head";
@@ -23,8 +24,8 @@ export default function About({
 			</Head>
 			<Container mt="50px">
 				<ContainerInside>
-					<Text>{drawings}</Text>
-					<Text>{tattoos}</Text>
+					<Text>{JSON.stringify(drawings)}</Text>
+					<Text>{JSON.stringify(tattoos)}</Text>
 
 					<VStack spacing={5} overflowX="hidden">
 						<HStack justify="center">
@@ -129,14 +130,18 @@ export default function About({
 }
 
 export async function getServerSideProps() {
-	const drawings = `${path.join(
-		getConfig().serverRuntimeConfig.PROJECT_ROOT,
-		"./public"
-	)}/art/drawings`;
-	const tattoos = ` ${path.join(
-		getConfig().serverRuntimeConfig.PROJECT_ROOT,
-		"./public"
-	)}/art/tattoos`;
+	const drawings = dirTree(
+		`${path.join(
+			getConfig().serverRuntimeConfig.PROJECT_ROOT,
+			"./public"
+		)}/art/drawings`
+	);
+	const tattoos = dirTree(
+		` ${path.join(
+			getConfig().serverRuntimeConfig.PROJECT_ROOT,
+			"./public"
+		)}/art/tattoos`
+	);
 
 	return { props: { drawings, tattoos } };
 }
