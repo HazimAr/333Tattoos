@@ -1,14 +1,21 @@
-import { Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
 import { motion } from "framer-motion";
+import getConfig from "next/config";
 import Head from "next/head";
-import Image from "next/image";
+import path from "path";
 
 const MotionVStack = motion(VStack);
 const MotionImage = motion(Image);
 
-export default function About(): JSX.Element {
+export default function About({
+	drawings,
+	tattoos,
+}: {
+	drawings: string;
+	tattoos: string;
+}): JSX.Element {
 	return (
 		<>
 			<Head>
@@ -16,6 +23,7 @@ export default function About(): JSX.Element {
 			</Head>
 			<Container mt="50px">
 				<ContainerInside>
+					{`${drawings} ${tattoos}`}
 					<VStack spacing={5} overflowX="hidden">
 						<HStack justify="center">
 							<Heading textAlign="center" size="2xl">
@@ -116,4 +124,17 @@ export default function About(): JSX.Element {
 			</Container>
 		</>
 	);
+}
+
+export async function getServerSideProps() {
+	const drawings = `${path.join(
+		getConfig().serverRuntimeConfig.PROJECT_ROOT,
+		"./public"
+	)}/art/drawings`;
+	const tattoos = ` ${path.join(
+		getConfig().serverRuntimeConfig.PROJECT_ROOT,
+		"./public"
+	)}/art/tattoos`;
+
+	return { props: { drawings, tattoos } };
 }
