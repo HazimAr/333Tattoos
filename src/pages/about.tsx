@@ -66,15 +66,19 @@ export default function About({
 							<MotionVStack w="100%">
 								<Heading>Who I Am</Heading>
 								<Text>
-									Lorem ipsum dolor sit, amet consectetur
-									adipisicing elit. Ut eius numquam ipsam
-									eaque accusantium ad sunt maxime magnam
-									deserunt odio, debitis cum expedita
-									necessitatibus fugiat optio ducimus, ratione
-									quam ea. Accusantium ad sunt maxime magnam
-									deserunt odio, debitis cum expedita
-									necessitatibus fugiat optio ducimus, ratione
-									quam ea.
+									Hello! My name is Marie and I’m a Digital
+									Artist and Tattoo Artist from Northern
+									Kentucky. I’ve been drawing since I was
+									little and it’s always been my passion. I’m
+									self taught through both areas and am always
+									finding ways to better my talents and
+									broaden my skills. I also enjoy oil/gouache
+									painting and do a bit of face painting as
+									well. One of my goals in life is to try a
+									bit of each art medium! And tattooing was a
+									big medium that stuck with me. And now my
+									goal is to master it. And I’m excited to see
+									where that goal leads me.
 								</Text>
 							</MotionVStack>
 						</HStack>
