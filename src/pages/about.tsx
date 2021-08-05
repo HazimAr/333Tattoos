@@ -3,9 +3,7 @@ import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
 import dirTree from "directory-tree";
 import { motion } from "framer-motion";
-import getConfig from "next/config";
 import Head from "next/head";
-import path from "path";
 
 const MotionVStack = motion(VStack);
 const MotionImage = motion(Image);
@@ -134,9 +132,7 @@ export default function About({
 }
 
 export async function getServerSideProps() {
-	const drawings = dirTree(
-		`./`
-	);
+	const drawings = dirTree(`./`);
 	const tattoos = dirTree(`./`);
 
 	return { props: { drawings, tattoos } };
