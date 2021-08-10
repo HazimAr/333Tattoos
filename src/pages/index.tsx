@@ -3,12 +3,12 @@ import {
 	Grid,
 	GridItem,
 	Heading,
+	HStack,
 	Image,
 	Modal,
 	ModalBody,
 	ModalCloseButton,
 	ModalContent,
-	ModalFooter,
 	ModalOverlay,
 	useDisclosure,
 	VStack,
@@ -26,7 +26,8 @@ export default function Gallery(): JSX.Element {
 		39, 40,
 	];
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	const [image, setImage] = useState();
+	const [image, setImage] = useState("");
+
 	return (
 		<>
 			<Head>
@@ -43,6 +44,12 @@ export default function Gallery(): JSX.Element {
 										key={`tattoo${picture}.jpg`}
 										name={`tattoo${picture}.jpg`}
 										src="/art/tattoos/"
+										onClick={() => {
+											setImage(
+												`/art/tattoos/tattoo${picture}.jpg`
+											);
+											onOpen();
+										}}
 									/>
 								);
 							})}
@@ -55,6 +62,12 @@ export default function Gallery(): JSX.Element {
 										key={`drawing${picture}.jpg`}
 										name={`drawing${picture}.jpg`}
 										src="/art/drawings/"
+										onClick={() => {
+											setImage(
+												`/art/drawings/drawing${picture}.jpg`
+											);
+											onOpen();
+										}}
 									/>
 								);
 							})}
@@ -64,24 +77,23 @@ export default function Gallery(): JSX.Element {
 			</Container>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
-				<ModalContent>
+				<ModalContent bg="brand.secondary">
 					<ModalCloseButton />
 					<ModalBody>
-						<Image src="" />
+						<VStack>
+							<Image src={image} />
+							<Button mr={3} onClick={onClose}>
+								Close
+							</Button>
+						</VStack>
 					</ModalBody>
-
-					<ModalFooter>
-						<Button colorScheme="blue" mr={3} onClick={onClose}>
-							Close
-						</Button>
-					</ModalFooter>
 				</ModalContent>
 			</Modal>
 		</>
 	);
 }
 
-function DrawingImage({ name, src }: { name: string; src: string }) {
+function DrawingImage({ src, name, onClick }: any) {
 	return (
 		<GridItem>
 			<Center h="100%">
@@ -95,6 +107,7 @@ function DrawingImage({ name, src }: { name: string; src: string }) {
 					rounded={5}
 					maxW="230px"
 					maxH="300px"
+					onClick={onClick}
 				/>
 			</Center>
 		</GridItem>
