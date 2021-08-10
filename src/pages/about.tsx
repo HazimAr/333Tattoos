@@ -57,7 +57,7 @@ export default function About(): JSX.Element {
 									Hello! My name is Marie and I’m a Digital
 									Artist and Tattoo Artist from Northern
 									Kentucky. I’ve been drawing since I was
-									little and it’s always been my passion. I’m
+									young and it’s always been my passion. I’m
 									self taught through both areas and am always
 									finding ways to better my talents and
 									broaden my skills. I also enjoy oil/gouache

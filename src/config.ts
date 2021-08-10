@@ -11,9 +11,10 @@ type MetaType = {
 };
 
 const META: MetaType = {
-	title: "333 Tattoos",
+	title: "333 Tattoos ||",
 	lang: "en-us",
-	description: "333 Tattoos",
+	description:
+		"Hello! My name is Marie and I’m a Digital Artist and Tattoo Artist from Northern Kentucky. I’ve been drawing since I was young and it’s always been my passion.",
 	url: "https://333tattoos.art/",
 	image: "/logo.png",
 };
