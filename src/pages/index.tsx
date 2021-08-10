@@ -4,11 +4,20 @@ import {
 	GridItem,
 	Heading,
 	Image,
+	Modal,
+	ModalBody,
+	ModalCloseButton,
+	ModalContent,
+	ModalFooter,
+	ModalOverlay,
+	useDisclosure,
 	VStack,
 } from "@chakra-ui/react";
+import Button from "@components/button";
 import Container from "@components/container";
 import ContainerInside from "@components/containerInside";
 import Head from "next/head";
+import { useState } from "react";
 export default function Gallery(): JSX.Element {
 	// console.log(__dirname);
 	const pictures = [
@@ -16,6 +25,8 @@ export default function Gallery(): JSX.Element {
 		21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
 		39, 40,
 	];
+	const { isOpen, onOpen, onClose } = useDisclosure();
+	const [image, setImage] = useState();
 	return (
 		<>
 			<Head>
@@ -51,6 +62,21 @@ export default function Gallery(): JSX.Element {
 					</VStack>
 				</ContainerInside>
 			</Container>
+			<Modal isOpen={isOpen} onClose={onClose}>
+				<ModalOverlay />
+				<ModalContent>
+					<ModalCloseButton />
+					<ModalBody>
+						<Image src="" />
+					</ModalBody>
+
+					<ModalFooter>
+						<Button colorScheme="blue" mr={3} onClick={onClose}>
+							Close
+						</Button>
+					</ModalFooter>
+				</ModalContent>
+			</Modal>
 		</>
 	);
 }
