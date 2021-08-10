@@ -77,15 +77,16 @@ export default function About(): JSX.Element {
 							<MotionVStack w="100%" mb={{ base: 10, md: 0 }}>
 								<Heading>My Experience</Heading>
 								<Text>
-									Lorem ipsum dolor sit, amet consectetur
-									adipisicing elit. Ut eius numquam ipsam
-									eaque accusantium ad sunt maxime magnam
-									deserunt odio, debitis cum expedita
-									necessitatibus fugiat optio ducimus, ratione
-									quam ea. Accusantium ad sunt maxime magnam
-									deserunt odio, debitis cum expedita
-									necessitatibus fugiat optio ducimus, ratione
-									quam ea.
+									I’ve been drawing since I was young, as I
+									grew I started doing commissions for
+									traditional and digital art and have been
+									doing them for as much as 6 years. I’m a
+									self taught tattoo artist of a year and a
+									half, I started during Covid of April 2020.
+									I’m a painter, a traditional pencil artist,
+									and a digital artist and have been for
+									years. I’m working towards apprenticeships
+									and growing from my own experiences.
 								</Text>
 							</MotionVStack>
 							<MotionVStack
