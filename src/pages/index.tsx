@@ -3,7 +3,6 @@ import {
 	Grid,
 	GridItem,
 	Heading,
-	HStack,
 	Image,
 	Modal,
 	ModalBody,
